@@ -18,7 +18,9 @@ export default function ContactCard() {
 
         {/* Subtext */}
         <p className="text-[15px] text-text-secondary leading-relaxed">
-          Available for freelance projects and frontend roles.
+          I’m open to customer support, fintech product support, and frontend opportunities where I can combine clear communication, technical understanding, and user-focused problem solving.
+
+          Whether it’s helping users understand a digital product, resolving support enquiries, or building clean interfaces, I care about making technology easier and more trustworthy for people.
         </p>
 
         {/* Email */}
@@ -28,7 +30,7 @@ export default function ContactCard() {
         >
           <Mail className="w-4 h-4 text-text-muted group-hover:text-silver transition-colors" />
           <span className="underline underline-offset-4 decoration-white/20 group-hover:decoration-white/40">
-            hello@eniola.dev
+            olajugbagbeeniola12@outlook.com
           </span>
         </a>
 

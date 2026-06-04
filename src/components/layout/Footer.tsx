@@ -68,7 +68,7 @@ export default function Footer() {
               className="inline-flex items-center gap-2 text-sm text-text-secondary hover:text-text-primary transition-colors"
             >
               <Mail className="w-4 h-4" />
-              hello@eniola.dev
+              olajugbagbeeniola12@outlook.com
             </a>
           </div>
 

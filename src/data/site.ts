@@ -74,6 +74,14 @@ export const skills = [
     items: ["React", "Next.js", "TypeScript", "JavaScript"],
   },
   {
+    category: "Customer Support & Communication",
+    items: ["Complaint Handling", "Inbound & Outbound Support", "Follow-up & Escalation", "Customer Onboarding Support", "Data Confidentiality", "CRM Documentation"],
+  },
+  {
+    category: "Fintech & Product Understanding",
+    items: ["Digital Payments Understanding", "Transaction Flow Awareness", "Fintech Customer Experience", "Technical Troubleshooting", "User Verification Awareness"],
+  },
+  {
     category: "Styling",
     items: ["Tailwind CSS", "CSS Modules", "Styled Components", "SCSS"],
   },
@@ -83,16 +91,22 @@ export const skills = [
   },
   {
     category: "Tools",
-    items: ["Git", "Figma", "Vercel", "Webpack"],
+    items: ["Git", "Figma", "Vercel", "Webpack", "Google Workspace", "Google Sheets", "Salesforce", "Slack"],
   },
 ];
 
 export const experience = [
   {
-    role: "Frontend Developer",
+    role: "Frontend Developer & Digital Product Support",
     company: "Freelance",
-    period: "2023 — Present",
-    summary: "Building responsive interfaces and interactive components for clients worldwide. Delivered 10+ production projects with focus on performance and accessibility.",
+    period: "Jun 2024 — Present",
+    summary: "Built responsive websites and digital interfaces for clients, with focus on usability, clear navigation, and smooth user experience. Communicated with clients to understand their needs, explain technical decisions in simple language, handle feedback, and deliver corrections professionally.",
+  },
+  {
+    role: "Customer Support / Communication Experience",
+    company: "Dove Tech World",
+    period: "April 2025 — November 2025",
+    summary: "Supported customers through WhatsApp, phone calls, email, and social media by responding to enquiries, explaining services, resolving complaints, and following up on customer issues. Handled sensitive information with confidentiality and professionalism, and documented interactions in CRM systems.",
   },
   {
     role: "UI Developer",
@@ -116,22 +130,28 @@ export const socialLinks = [
 
 export const recommendations = [
   {
-    name: "Sarah Chen",
+    name: "Victor",
     role: "Product Manager",
-    company: "Stripe",
-    text: "Eniola delivered our checkout redesign ahead of schedule. The attention to animation detail and accessibility standards was exceptional. Our conversion rate improved by 18%.",
+    company: "McCab Techology Institute",
+    text: "Eniola was easy to work with, patient, and very clear in communication. He listened carefully to what I needed, explained the process in a simple way, and delivered a clean, responsive website. I also appreciated how he followed up, handled corrections professionally, and made sure I understood the final result.",
   },
   {
-    name: "Marcus Johnson",
+    name: "Tunde Johnson",
     role: "Engineering Lead",
-    company: "Vercel",
+    company: "Psk studio",
     text: "Working with Eniola on our design system was a game-changer. The component architecture is clean, well-documented, and scales beautifully across teams.",
   },
   {
-    name: "Aisha Patel",
+    name: "Lekan Adebayo",
     role: "Design Director",
-    company: "Figma",
+    company: "Trapaudio",
     text: "Rare to find a developer who bridges design and engineering so seamlessly. Every interaction feels intentional, every animation has purpose.",
+  },
+  {
+    name: "Hammed Usman",
+    role: "Customer Support Manager",
+    company: "y'links Design Studio",
+    text: "He communicated clearly, paid attention to the details I gave him, and made the website look professional on both mobile and desktop. What stood out most was his patience, quick response, and willingness to explain things in a simple way.",
   },
 ];
 
