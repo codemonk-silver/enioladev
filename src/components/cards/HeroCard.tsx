@@ -14,10 +14,7 @@ export default function HeroCard() {
     <BaseCard className="overflow-hidden relative" delay={0} hover={false}>
       <div className="grid lg:grid-cols-[1fr_280px] gap-8 lg:gap-14 items-center">
         <div className="space-y-5 md:space-y-6 order-2 lg:order-1">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/15 border border-green-500/30">
-            <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse-dot" />
-            <span className="font-mono text-[11px] text-green-400 font-medium">Available for work</span>
-          </div>
+          
 
           <h1 className="font-display font-bold text-3xl sm:text-4xl md:text-[52px] leading-[1.05] text-text-primary tracking-tight">
             Eniola Olajugbagbe

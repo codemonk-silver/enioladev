@@ -1,4 +1,6 @@
-import { ArrowUpRight, Mail, Github, Linkedin, Twitter } from "lucide-react";
+// Replace line 1 with this exact casing:
+import { ArrowUpRight, Mail } from "lucide-react";
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { socialLinks } from "../../data/site";
 
 interface FooterLink {
@@ -35,9 +37,9 @@ const footerLinks: FooterColumn[] = [
 ];
 
 const iconMap: Record<string, React.ReactNode> = {
-  GitHub: <Github className="w-4 h-4" />,
-  LinkedIn: <Linkedin className="w-4 h-4" />,
-  Twitter: <Twitter className="w-4 h-4" />,
+  GitHub: <FaGithub className="w-4 h-4" />,
+  LinkedIn: <FaLinkedin className="w-4 h-4" />,
+  Twitter: <FaTwitter className="w-4 h-4" />,
 };
 
 export default function Footer() {

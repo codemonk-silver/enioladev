@@ -1,4 +1,5 @@
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
 import SkillPill from "../ui/SkillPill";
 import type { Project } from "../../data/site";
 
@@ -49,7 +50,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                 className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-medium text-white hover:bg-white/20 transition-colors"
                 onClick={(e) => e.stopPropagation()}
               >
-                <Github className="w-3 h-3" />
+                <FaGithub className="w-3 h-3" />
                 Source
               </a>
             </div>
@@ -94,7 +95,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               rel="noopener noreferrer"
               className="group/link inline-flex items-center gap-1.5 text-sm font-medium text-text-secondary transition-colors duration-300 hover:text-text-primary"
             >
-              <Github className="w-3.5 h-3.5" />
+              <FaGithub className="w-3.5 h-3.5" />
               <span>GitHub</span>
             </a>
           </div>
