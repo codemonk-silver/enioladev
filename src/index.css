@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap");
-
 @import "tailwindcss";
 
 @theme inline {
@@ -194,4 +192,58 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+/* Paint cheap, static surfaces on touch screens; keep the desktop visual language. */
+.grain-overlay {
+  background-image: url("/assets/noise.png");
+  background-repeat: repeat;
+  background-size: 96px 96px;
+}
+
+/* Only devices with a real hover pointer get elaborate card hover effects. */
+@media (hover: hover) and (pointer: fine) {
+  .interactive-card {
+    transition: transform 250ms ease, border-color 250ms ease, box-shadow 250ms ease;
+  }
+  .interactive-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, .14);
+    box-shadow: 0 20px 40px rgba(0,0,0,.45), inset 0 1px rgba(255,255,255,.06);
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+  .card-surface {
+    background: #111116;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    box-shadow: 0 5px 16px rgba(0,0,0,.20);
+  }
+  .grain-overlay, .project-hover-overlay { display: none; }
+  /* Avoid the GPU expense of large fixed frosted panes on phones. */
+  nav .backdrop-blur-sm,
+  nav .backdrop-blur-md { -webkit-backdrop-filter: none; backdrop-filter: none; }
+}
+
+/* Reduce effects for users who prefer minimal animation, including on mobile. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+  .grain-overlay { display: none; }
+  .interactive-card:hover { transform: none; }
+}
+
+/* Avoid a heavy fixed backdrop on small screens even with a fine pointer emulator. */
+@media (max-width: 767px) {
+  .grain-overlay, .project-hover-overlay { display: none; }
+  .card-surface { -webkit-backdrop-filter: none; backdrop-filter: none; }
+  #home, #about, #projects, #contact { scroll-margin-top: 80px; }
+}
+@media (min-width: 768px) {
+  #home, #about, #projects, #contact { scroll-margin-top: 112px; }
 }

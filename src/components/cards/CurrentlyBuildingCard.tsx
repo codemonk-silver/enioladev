@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { Wrench } from "lucide-react";
 import BaseCard from "./BaseCard";
 import SkillPill from "../ui/SkillPill";
@@ -44,12 +43,9 @@ export default function CurrentlyBuildingCard() {
               <span className="font-mono text-[11px] text-text-secondary">{currentlyBuilding.progress}%</span>
             </div>
             <div className="h-1.5 rounded-full bg-white/[0.06] overflow-hidden">
-              <motion.div
+              <div
                 className="h-full rounded-full bg-gradient-to-r from-white/40 to-white/60"
-                initial={{ width: 0 }}
-                whileInView={{ width: `${currentlyBuilding.progress}%` }}
-                viewport={{ once: true }}
-                transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] as [number, number, number, number], delay: 0.5 }}
+                style={{ width: `${currentlyBuilding.progress}%` }}
               />
             </div>
           </div>

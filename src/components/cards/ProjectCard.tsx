@@ -1,45 +1,36 @@
-import { motion } from "framer-motion";
-import { ExternalLink } from "lucide-react";
-import { FaGithub } from "react-icons/fa";
+import { ExternalLink, Github } from "lucide-react";
 import SkillPill from "../ui/SkillPill";
 import type { Project } from "../../data/site";
 
 interface ProjectCardProps {
   project: Project;
-  index: number;
 }
 
-export default function ProjectCard({ project, index }: ProjectCardProps) {
+export default function ProjectCard({ project }: ProjectCardProps) {
   const isLarge = project.size === "large";
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{
-        duration: 0.8,
-        delay: 0.3 + index * 0.1,
-        ease: [0.22, 1, 0.36, 1] as [number, number, number, number],
-      }}
-    >
-      <div className="card-surface p-5 md:p-6 transition-all duration-500 hover:border-white/[0.14] hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,0,0,0.45)] group">
+    <div>
+      <div className="card-surface interactive-card p-5 md:p-6 group">
         {/* Image Container */}
         <div
           className={`relative overflow-hidden rounded-[20px] bg-dark-bg-secondary ${
             isLarge ? "aspect-video" : "aspect-[4/3]"
           }`}
         >
-          <motion.img
+          <img
             src={project.image}
+            srcSet={`${project.image.replace("-1200.webp", "-640.webp")} 640w, ${project.image} 1200w`}
+            sizes={isLarge ? "(min-width: 1024px) 1050px, (min-width: 768px) 90vw, 100vw" : "(min-width: 768px) 50vw, 100vw"}
             alt={project.title}
-            className="w-full h-full object-cover"
+            width={1200}
+            height={540}
+            decoding="async"
             loading="lazy"
-            whileHover={{ scale: 1.04 }}
-            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
+            className="w-full h-full object-cover transition-transform duration-300 motion-safe:group-hover:scale-[1.03]"
           />
           {/* Hover overlay with links */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-between p-4">
+          <div className="project-hover-overlay absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 pointer-events-none group-hover:pointer-events-auto group-hover:opacity-100 transition-opacity duration-200 flex items-end justify-between p-4">
             <div className="flex gap-2">
               <a
                 href={project.liveUrl}
@@ -58,7 +49,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                 className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-medium text-white hover:bg-white/20 transition-colors"
                 onClick={(e) => e.stopPropagation()}
               >
-                <FaGithub className="w-3 h-3" />
+                <Github className="w-3 h-3" />
                 Source
               </a>
             </div>
@@ -103,12 +94,12 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
               rel="noopener noreferrer"
               className="group/link inline-flex items-center gap-1.5 text-sm font-medium text-text-secondary transition-colors duration-300 hover:text-text-primary"
             >
-              <FaGithub className="w-3.5 h-3.5" />
+              <Github className="w-3.5 h-3.5" />
               <span>GitHub</span>
             </a>
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }

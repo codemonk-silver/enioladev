@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import ProjectCard from "../components/cards/ProjectCard";
 import { projects } from "../data/site";
 
@@ -8,14 +7,7 @@ export default function FeaturedProjects() {
   const smallProjects = projects.filter((p) => p.size === "small");
 
   return (
-    <motion.section
-      id="projects"
-      className="card-surface p-6 md:p-10"
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
-    >
+    <section id="projects" className="card-surface p-6 md:p-10">
       {/* Header */}
       <div className="mb-8 flex items-end justify-between">
         <div>
@@ -35,23 +27,23 @@ export default function FeaturedProjects() {
       <div className="space-y-6">
         {/* Large Featured */}
         {largeProject && (
-          <ProjectCard project={largeProject} index={0} />
+          <ProjectCard project={largeProject} />
         )}
 
         {/* Medium Row */}
         <div className="grid md:grid-cols-2 gap-6">
-          {mediumProjects.map((project, idx) => (
-            <ProjectCard key={project.id} project={project} index={idx + 1} />
+          {mediumProjects.map((project) => (
+            <ProjectCard key={project.id} project={project} />
           ))}
         </div>
 
         {/* Small Row */}
         <div className="grid md:grid-cols-2 gap-6">
-          {smallProjects.map((project, idx) => (
-            <ProjectCard key={project.id} project={project} index={idx + 3} />
+          {smallProjects.map((project) => (
+            <ProjectCard key={project.id} project={project} />
           ))}
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 }

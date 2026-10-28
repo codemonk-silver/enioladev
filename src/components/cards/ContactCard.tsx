@@ -25,7 +25,7 @@ export default function ContactCard() {
 
         {/* Email */}
         <a
-          href="mailto:hello@eniola.dev"
+          href="mailto:olajugbagbeeniola12@outlook.com"
           className="inline-flex items-center gap-2.5 text-base font-medium text-text-primary transition-colors duration-300 hover:text-silver group"
         >
           <Mail className="w-4 h-4 text-text-muted group-hover:text-silver transition-colors" />
@@ -52,7 +52,7 @@ export default function ContactCard() {
         {/* CTA */}
        <div className="mt-auto pt-4">
           <a
-            href="../Eniola_Frontend_Engineer_CV.pdf"
+            href="/Eniola_Frontend_Engineer_CV.pdf"
             download="Eniola_Frontend_Engineer_CV.pdf"
             className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-text-primary text-dark-bg font-display font-semibold text-sm transition-opacity duration-300 hover:opacity-90"
           >
