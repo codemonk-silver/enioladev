@@ -23,9 +23,13 @@ export default function Navbar() {
       const nextScrolled = window.scrollY > 50;
       setScrolled((prev) => prev === nextScrolled ? prev : nextScrolled);
       for (let i = ids.length - 1; i >= 0; i--) {
-        if (targets[i] && targets[i].getBoundingClientRect().top <= 120) {
-          setActiveSection((prev) => prev === ids[i] ? prev : ids[i]);
-          break;
+        const targetElement = targets[i];
+        // Added explicit checking to prevent 'Object is possibly null' error
+        if (targetElement && typeof targetElement.getBoundingClientRect === "function") {
+          if (targetElement.getBoundingClientRect().top <= 120) {
+            setActiveSection((prev) => prev === ids[i] ? prev : ids[i]);
+            break;
+          }
         }
       }
     };
@@ -114,7 +118,7 @@ export default function Navbar() {
         <div className="absolute inset-0 bg-black/75" onClick={() => setMenuOpen(false)} />
         <div
           id="mobile-navigation"
-          inert={!menuOpen}
+          {...{ [menuOpen ? "" : "inert"]: "" }}
           className={`absolute top-0 right-0 bottom-0 w-[80%] max-w-[320px] bg-dark-bg border-l border-white/[0.08] flex flex-col transition-transform duration-200 ease-out ${menuOpen ? "translate-x-0" : "translate-x-full"}`}
         >
           <div className="flex items-center gap-3 px-6 pt-6 pb-4 border-b border-white/[0.06]">
@@ -148,8 +152,7 @@ export default function Navbar() {
               Download Resume <ArrowUpRight className="w-4 h-4" />
             </a>
             <div className="flex items-center justify-center gap-2 text-xs text-text-muted">
-              <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse-dot" />
-              <span>Open to opportunities</span>
+              <span>© {new Date().getFullYear()} Eniola. All rights reserved.</span>
             </div>
           </div>
         </div>
