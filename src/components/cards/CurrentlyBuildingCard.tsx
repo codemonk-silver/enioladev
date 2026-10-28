@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Wrench, ArrowUpRight } from "lucide-react";
+import { Wrench } from "lucide-react";
 import BaseCard from "./BaseCard";
 import SkillPill from "../ui/SkillPill";
 import { currentlyBuilding } from "../../data/site";
