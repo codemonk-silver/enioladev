@@ -50,9 +50,10 @@ export default function ContactCard() {
         </div>
 
         {/* CTA */}
-        <div className="mt-auto pt-4">
+       <div className="mt-auto pt-4">
           <a
-            href="#"
+            href="../Eniola_Frontend_Engineer_CV.pdf"
+            download="Eniola_Frontend_Engineer_CV.pdf"
             className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-text-primary text-dark-bg font-display font-semibold text-sm transition-opacity duration-300 hover:opacity-90"
           >
             <Download className="w-4 h-4" />

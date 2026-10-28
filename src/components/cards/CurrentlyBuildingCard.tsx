@@ -61,16 +61,7 @@ export default function CurrentlyBuildingCard() {
             ))}
           </div>
 
-          {/* Link */}
-          <a
-            href="https://twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-sm font-medium text-text-secondary transition-colors duration-300 hover:text-text-primary group"
-          >
-            <span>Follow along on Twitter</span>
-            <ArrowUpRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </a>
+        
         </div>
       </div>
     </BaseCard>

@@ -114,10 +114,10 @@ export const experience = [
     summary: "Built responsive websites and digital interfaces for clients, with focus on usability, clear navigation, and smooth user experience. Communicated with clients to understand their needs, explain technical decisions in simple language, handle feedback, and deliver corrections professionally.",
   },
   {
-    role: "Customer Support / Communication Experience",
+    role: "Technical Support & Customer Systems Analyst",
     company: "Dove Tech World",
     period: "April 2025 — November 2025",
-    summary: "Supported customers through WhatsApp, phone calls, email, and social media by responding to enquiries, explaining services, resolving complaints, and following up on customer issues. Handled sensitive information with confidentiality and professionalism, and documented interactions in CRM systems.",
+    summary: "Documented structural platform errors and routed systemic visual display bugs cleanly to internal engineering crews via precise replication procedures and Handled sensitive information with confidentiality and professionalism, and documented interactions in CRM systems.",
   },
   {
     role: "UI Developer",
@@ -134,8 +134,8 @@ export const stats = [
 ];
 
 export const socialLinks = [
-  { name: "GitHub", url: "https://github.com" },
-  { name: "LinkedIn", url: "https://linkedin.com" },
+  { name: "GitHub", url: "https://github.com/codemonk-silver" },
+  { name: "LinkedIn", url: "https://linkedin.com/in/eniola-olajugbagbe-058aa2281" },
   { name: "Twitter", url: "https://twitter.com" },
 ];
 
@@ -167,8 +167,8 @@ export const recommendations = [
 ];
 
 export const currentlyBuilding = {
-  title: "Design System Toolkit",
-  description: "An open-source collection of accessible, animated React components with zero dependencies. Building in public on Twitter.",
+  title: "RhookPay",
+  description: "Move money with confidence. Send and receive payments, manage your naira, and explore digital assets — all in one beautifully simple experience.",
   progress: 72,
-  tech: ["React", "TypeScript", "Storybook"],
+  tech: ["React", "TypeScript", "Zustand", "Tailwind CSS", "Framer Motion", "Express.js", "Node.js", "PostgreSQL", "Redis"],
 };

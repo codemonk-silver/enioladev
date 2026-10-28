@@ -137,8 +137,8 @@ export default function HeroCard() {
               {floatingTags.map((tag, i) => {
                 const positions = [
                   { x: -60, y: 40 },
-                  { x: 220, y: 20 },
-                  { x: 240, y: 160 },
+                  { x: 170, y: 20 },
+                  { x: 198, y: 160 },
                   { x: -50, y: 200 },
                   { x: 210, y: 260 },
                 ];

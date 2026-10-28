@@ -23,22 +23,14 @@ const footerLinks: FooterColumn[] = [
       { label: "Contact", href: "#contact" },
     ],
   },
-  {
-    title: "Projects",
-    links: [
-      { label: "E-Commerce", href: "#projects" },
-      { label: "Dashboard", href: "#projects" },
-      { label: "Portfolio Gen", href: "#projects" },
-      { label: "Weather App", href: "#projects" },
-    ],
-  },
+  
   {
     title: "Connect",
     links: [
-      { label: "GitHub", href: "https://github.com", external: true },
-      { label: "LinkedIn", href: "https://linkedin.com", external: true },
+      { label: "GitHub", href: "https://github.com/codemonk-silver", external: true },
+      { label: "LinkedIn", href: "https://linkedin.com/in/eniola-olajugbagbe-058aa2281", external: true },
       { label: "Twitter", href: "https://twitter.com", external: true },
-      { label: "Email", href: "mailto:hello@eniola.dev", external: true },
+      { label: "Email", href: "mailto:olajugbagbeeniola12@outlook.com", external: true },
     ],
   },
 ];
@@ -54,7 +46,7 @@ export default function Footer() {
     <footer className="border-t border-white/[0.06] bg-dark-bg-secondary/50">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         {/* Top Section */}
-        <div className="grid md:grid-cols-[1.5fr_1fr_1fr_1fr] gap-10 md:gap-8">
+        <div className="grid md:grid-cols-[2.5fr_1.5fr_1fr] gap-10 md:gap-8">
           {/* Brand */}
           <div className="space-y-4">
             <h3 className="font-display font-bold text-xl text-text-primary">
@@ -64,7 +56,7 @@ export default function Footer() {
               Frontend developer crafting premium interfaces with code, motion, and precision. Open to freelance and full-time opportunities.
             </p>
             <a
-              href="mailto:hello@eniola.dev"
+              href="mailto:olajugbagbeeniola12@outlook.com"
               className="inline-flex items-center gap-2 text-sm text-text-secondary hover:text-text-primary transition-colors"
             >
               <Mail className="w-4 h-4" />

@@ -92,7 +92,8 @@ export default function Navbar() {
           <div className="w-px h-4 bg-white/[0.1] mx-1" />
 
           <a
-            href="#"
+            href="../Eniola_Frontend_Engineer_CV.pdf"
+            download="Eniola_Frontend_Engineer_CV.pdf"
             className="flex items-center gap-1.5 px-5 py-2 rounded-full border border-white/[0.12] font-mono text-[11px] uppercase tracking-wider text-text-secondary transition-all duration-300 hover:bg-white/[0.08] hover:text-text-primary hover:border-white/20"
           >
             Resume
@@ -249,7 +250,8 @@ export default function Navbar() {
               {/* Drawer Footer */}
               <div className="px-6 py-6 border-t border-white/[0.06] space-y-3">
                 <a
-                  href="#"
+                  href="../Eniola_Frontend_Engineer_CV.pdf"
+                  download="Eniola_Frontend_Engineer_CV.pdf"
                   className="flex items-center justify-center gap-2 w-full px-5 py-3.5 rounded-xl bg-text-primary text-dark-bg font-display font-semibold text-sm transition-transform active:scale-[0.98]"
                 >
                   Download Resume

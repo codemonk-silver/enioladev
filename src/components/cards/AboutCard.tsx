@@ -18,11 +18,7 @@ export default function AboutCard() {
 
         {/* Bio */}
         <p className="text-[15px] text-text-secondary leading-relaxed">
-          I am a Frontend Developer with a strong customer support mindset, focused on creating digital experiences that are clear, simple, and easy for people to use. My background in frontend development helps me understand how users interact with apps, where they may get confused, and how to explain technical issues in a calm and simple way.
-
-          Beyond building interfaces, I care about helping users feel supported. I have experience communicating with customers, handling enquiries, explaining services, following up on issues, and making sure users feel heard and understood.
-
-          As someone who has used Raenest for personal transactions for the past two years, I understand the importance of trust, clarity, speed, and reliable support in fintech. I bring both product understanding and human communication together to help customers solve problems with confidence.
+          Performance-driven Frontend Engineer with 3+ years of experience engineering scalable user interfaces, reusable component ecosystems, and high-conversion client runtimes. Expert in React.js, Next.js, TypeScript, JavaScript, and Tailwind CSS, with specialized proficiency in bridging the gap between complex interface designs and production-ready system logic. Demonstrated track record optimizing Core Web Vitals, streamlining complex application state lifecycles via Zustand and Redux Toolkit, and implementing rigid component schemas to ensure high scalability and seamless global browser performance.
         </p>
 
         {/* Philosophy */}
